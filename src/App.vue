@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="yellow"
       dark
     >
       <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -14,10 +14,10 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Application
+            Vue.js 배워보자!
           </v-list-item-title>
-          <v-list-item-subtitle>
-            subtext
+          <v-list-item-subtitle class="pt-3">
+            할수 있다!
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -61,10 +61,10 @@ export default {
       return {
         drawer: false,
         items: [
-          { title: 'Sign-in', icon: 'mdi-view-dashboard', to:'/' },
-
-          { title: 'Sign-up', icon: 'mdi-help-box', to:'sign-up' },
-          { title: 'Grid-system', icon: 'mdi-image', to:'grid-system' }
+          { title: 'Home', icon: 'mdi-view-dashboard', to:'/hello-vue' },
+          { title: '로그인', icon: 'mdi-view-dashboard', to:'/sign-in' },
+          { title: '회원가입', icon: 'mdi-help-box', to:'/sign-up' },
+          { title: 'Grid-system', icon: 'mdi-image', to:'/grid-system' }
           // { title: 'About', icon: 'mdi-help-box' },
         ],
         right: null,

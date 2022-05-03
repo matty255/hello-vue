@@ -16,11 +16,11 @@
           elevation="11"
           class="pt-10"
         >
-          <h2 class="purple--text text-uppercase">
+          <h2 class="yellow--text text-uppercase">
             {{ title }}
           </h2>
           <v-divider
-            color="purple"
+            color="yellow"
             class="mt-2"
           />
           <v-form
@@ -34,7 +34,7 @@
               v-model="email"
               append-icon="mdi-mailbox"
               outlined
-              color="purple"
+              color="yellow"
               error-count="2"
               :rules="emailRules"
               label="E-mail"
@@ -42,7 +42,7 @@
             />
             <v-text-field
               v-model="password"
-              color="purple"
+              color="yellow"
               :rules="passwordRules"
               :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
               :type="show1 ? 'text' : 'password'"
@@ -57,7 +57,7 @@
               type="submit"
               block
               :disabled="!valid"
-              color="purple darken-4"
+              color="yellow darken-4"
               class="mr-4 text"
               @click="validate"
             >

@@ -3,11 +3,17 @@ import VueRouter from "vue-router";
 import Dashboard from "@/views/DashBoard";
 import GridSystem from "@/views/GridSystem";
 import SignUp from "@/views/SignUp";
+import HomeComponent from "@/views/HomeComponent";
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/hello-vue",
+    name: "HomeComponent",
+    component: HomeComponent,
+  },
+  {
+    path: "/sign-in",
     name: "Dashboard",
     component: Dashboard,
   },
