@@ -1,10 +1,13 @@
 <template>
-  <div
-    class="ball"
+  <v-btn
+    class="ball flex-grow-0 flex-shrink-0"
+    fab
+    dark
+
     :style="styleObject"
   >
     {{ number }}
-  </div>
+  </v-btn>
 </template>
 
 
@@ -28,7 +31,7 @@ export default {
         }else if(this.number <= 20){
             background = 'orange';
         }else if(this.number <= 30){
-            background = 'yellow'
+            background = 'gold'
         }else if(this.number <= 40){
             background = 'blue';
         }else{
@@ -45,27 +48,12 @@ export default {
 <style scoped>
     .ball{
         display: inline-block;
-        border: 1px solid black;
-        border-radius: 20px;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 24px;
         text-align: center;
-        margin-right: 20px;
-    }
-</style>
+        margin: 5px;
 
-<style scoped>
-    .ball{
-        display: inline-block;
-        border: 1px solid black;
-        border-radius: 20px;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 20px;
-        text-align: center;
-        margin-right: 20px;
     }
 </style>

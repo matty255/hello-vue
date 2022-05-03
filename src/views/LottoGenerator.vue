@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>로또 생성기</h1>
-    <v-card class="d-flex pa-10 justify-center">
+    <v-card class="d-flex pa-10 justify-center flex-wrap ma-5">
       <lotto-ball
         v-for="ball in winBalls"
         :key="ball"
