@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Dashboard from "@/views/DashBoard";
+import Dashboard from "@/views/LoginComponent";
 import GridSystem from "@/views/GridSystem";
 import SignUp from "@/views/SignUp";
 import HomeComponent from "@/views/HomeComponent";

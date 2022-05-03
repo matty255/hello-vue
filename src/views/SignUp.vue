@@ -16,12 +16,12 @@
           elevation="11"
           class="pt-10"
         >
-          <h2 class="yellow--text text-uppercase">
+          <h2 class="orange--text text-uppercase mb-3">
             {{ title }}
           </h2>
           <v-divider
-            color="yellow"
-            class="mt-2"
+            color="orange"
+            class="mt-2 darken-4 pa-1 mx-3"
           />
           <v-form
             ref="form"
@@ -34,7 +34,7 @@
               v-model="email"
               color="yellow"
               outlined
-              shaped
+
               append-icon="mdi-mailbox"
               error-count="2"
               :rules="emailRules"
@@ -100,32 +100,27 @@
   export default {
     data() {
       return {
-        title: "Register",
+        title: "회원가입하기",
         valid: true,
         show1: false,
         show2: false,
         email: "",
         emailRules: [
-          v => !!v || "E-mail is required",
-          v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+          v => !!v || "ID를 입력해주세요",
+          v => /.+@.+\..+/.test(v) || "ID는 메일 형태로 해주세요"
         ],
         password: "",
         passwordRules: [
-          v => !!v || "Password is required",
-          v => (v && v.length >= 8) || "Password must be less than 8 characters",
-          v => /(?=.*[A-Z])/.test(v) || "Must have one uppercase character",
-          v => /(?=.*\d)/.test(v) || "Must have one number",
+          v => !!v || "Password를 입력해주세요",
+          v => (v && v.length >= 8) || "Password는 8자 이상이어야 합니다",
+          v => /(?=.*[a-z])/.test(v) && /(?=.*\d)/.test(v)  || "영문과 숫자를 혼합해주세요",
           v =>
-            /([!@$%<>*''])/.test(v) || "Must have one special character [!@#$%]"
+            /([!@$%<>*''])/.test(v) || "다음과 같은 특수문자를 포함해주세요 [!@#$%]"
         ],
         confirmPassword: "",
         confirmPasswordRules: [
-          v => !!v || "Confirm Password is required",
-          v =>
-            (v && v.length >= 8) ||
-            "Confirm Password must be less than 8 characters",
-          v => !!v || "Confirm password",
-          v => v === this.password || "Passwords do not match"
+          v => !!v || "Password를 다시 한번 입력해주세요",
+          v => v === this.password || "Password가 일치하지 않습니다"
         ]
       };
     },
@@ -135,7 +130,15 @@
         this.refs.form.validate();
       },
       //..registring a new user
-      onSignup() {}
+      onSignup() {
+        if(this.email === "" || this.password === "" || this.confirmPassword === "") {
+            alert("빈칸을 채워주세요")
+          } else if (this.password !== this.confirmPassword) {
+            alert("비밀번호를 확인해주세요.")
+          } else {
+            alert("회원가입에 성공하셨습니다. 로그인해주세요")
+          }
+      }
     }
   };
   </script>

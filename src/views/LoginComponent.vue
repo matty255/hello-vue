@@ -16,13 +16,14 @@
           elevation="11"
           class="pt-10"
         >
-          <h2 class="yellow--text text-uppercase">
+          <h2 class="orange--text text-uppercase mb-3">
             {{ title }}
           </h2>
           <v-divider
-            color="yellow"
-            class="mt-2"
+            color="orange"
+            class="mt-2 darken-4 pa-1 mx-3"
           />
+          <!-- ref로 추적 -->
           <v-form
             ref="form"
             v-model="valid"
@@ -85,19 +86,18 @@
     <script>
     export default {
       data: () => ({
-        title: "Login",
+        title: "로그인 컴포넌트 만들기",
         valid: true,
         show1: false,
-        show2: false,
         email: "",
         emailRules: [
-          v => !!v || "E-mail is required",
-          v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+          v => !!v || "ID를 입력해주세요",
+          v => /.+@.+\..+/.test(v) || "ID는 메일 형태로 해주세요"
         ],
         password: "",
         passwordRules: [
-          v => !!v || "Password is required",
-          v => (v && v.length >= 8) || "Password must be less than 8 characters"
+          v => !!v || "Password를 입력해주세요",
+          v => (v && v.length >= 8) || "Password는 8자 이상이어야 합니다"
         ]
       }),
 
@@ -108,7 +108,12 @@
         },
         //Login method here
         onLogin() {
-          //api call here
+          if(this.email === "" || this.password === "") {
+            alert("빈칸을 채워주세요")
+          } else{
+            alert("로그인 되었습니다.")
+          }
+
         }
       }
     };

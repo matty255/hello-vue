@@ -90,7 +90,9 @@
         <li>state = state</li>
         <li>getters = computed</li>
         <li>mutations = state를 동기적으로 수정하고 싶을때</li>
-        <li>actions = state를 비동기적으로 수정하고 싶을때, 여러 mutation을 연달아 실행하고 싶을 때</li>
+        <li>
+          actions = state를 비동기적으로 수정하고 싶을때, 여러 mutation을 연달아 실행하고 싶을 때
+        </li>
       </ul>
     </div>
   </div>

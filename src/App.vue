@@ -3,6 +3,7 @@
     <v-app-bar
       app
       color="yellow"
+      class="darken-2"
       dark
     >
       <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -59,7 +60,7 @@ export default {
 
       data () {
       return {
-        drawer: false,
+        drawer: true,
         items: [
           { title: 'Home', icon: 'mdi-view-dashboard', to:'/hello-vue' },
           { title: '로그인', icon: 'mdi-view-dashboard', to:'/sign-in' },
