@@ -65,8 +65,10 @@ export default {
           { title: 'Home', icon: 'mdi-view-dashboard', to:'/hello-vue' },
           { title: '로그인', icon: 'mdi-view-dashboard', to:'/sign-in' },
           { title: '회원가입', icon: 'mdi-help-box', to:'/sign-up' },
-          { title: 'Grid-system', icon: 'mdi-image', to:'/grid-system' }
-          // { title: 'About', icon: 'mdi-help-box' },
+          { title: 'Grid-system', icon: 'mdi-image', to:'/grid-system' },
+          { title: 'WordMix', icon: 'mdi-export', to:'/word-mix' },
+          { title: 'ReactionSpeed', icon: 'mdi-export', to:'/reaction-speed' },
+          { title: 'LottoGenerator', icon: 'mdi-export', to:'/lotto-generator'}
         ],
         right: null,
       }

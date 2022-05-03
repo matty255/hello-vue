@@ -4,6 +4,9 @@ import Dashboard from "@/views/LoginComponent";
 import GridSystem from "@/views/GridSystem";
 import SignUp from "@/views/SignUp";
 import HomeComponent from "@/views/HomeComponent";
+import WordMix from "@/views/WordMix";
+import ReactionSpeed from "@/views/ReactionSpeed";
+import LottoGenerator from "@/views/LottoGenerator";
 Vue.use(VueRouter);
 
 const routes = [
@@ -26,6 +29,21 @@ const routes = [
     path: "/sign-up",
     name: "SignUp",
     component: SignUp,
+  },
+  {
+    path: "/word-mix",
+    name: "WordMix",
+    component: WordMix,
+  },
+  {
+    path: "/reaction-speed",
+    name: "ReactionSpeed",
+    component: ReactionSpeed,
+  },
+  {
+    path: "/lotto-generator",
+    name: "LottoGenerator",
+    component: LottoGenerator,
   },
 ];
 
